@@ -55,7 +55,6 @@ h2. createLink <a name="createLink"></a>
   <a data-wysihtml5-dialog-action="save">OK</a>
   <a data-wysihtml5-dialog-action="cancel">Cancel</a>
 </div>
-
 <!-- Pre-defined href -->
 <a data-wysihtml5-command="createLink" data-wysihtml5-command-value="http://www.google.com">insert google link</a>
 </code></pre>
@@ -81,8 +80,7 @@ h2. createLink <a name="createLink"></a>
 h2. fontSize <a name="fontSize"></a>
 
 * Generated markup:
-<pre><code>
-<!-- XS -->
+<pre><code><!-- XS -->
 <span class="wysiwyg-font-size-x-small">text</span>
 <!-- S -->
 <span class="wysiwyg-font-size-small">text</span>
@@ -220,7 +218,6 @@ h2. insertImage <a name="insertImage"></a>
   <a data-wysihtml5-dialog-action="save">OK</a>
   <a data-wysihtml5-dialog-action="cancel">Cancel</a>
 </div>
-
 <!-- Pre-defined src -->
 <a data-wysihtml5-command="insertImage" data-wysihtml5-command-value="http://url.com/foo.jpg">insert example image</a>
 </code></pre>
