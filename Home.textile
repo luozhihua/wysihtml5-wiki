@@ -7,7 +7,7 @@ It uses a sophisticated security concept and aims to generate fully valid HTML5 
 
 h2. Getting Started
 
-The "getting started guide":https://github.com/xing/wysihtml5/wiki/Getting-Started explains how to integrate wysihtml5 easily into your website.
+The "Getting Started Guide":https://github.com/xing/wysihtml5/wiki/Getting-Started explains how to integrate wysihtml5 easily into your website.
 
 h2. Configuration
 
