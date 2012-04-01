@@ -28,7 +28,7 @@ h2. bold
 * Required parser rules:
 <pre><code>var wysihtml5ParserRules = {
   tags: {
-    "b": 1
+    "b": 1,
     // if you want to turn all <strong> elements into <b> (optional)
    "strong": { "rename_tag": "b" }
   }
@@ -50,7 +50,7 @@ h2. createLink
 <div data-wysihtml5-dialog="createLink">
   <label>
     Link:
-    <input data-wysihtml5-dialog-field="href" value="http://" class="text">
+    <input data-wysihtml5-dialog-field="href" value="http://">
   </label>
   <a data-wysihtml5-dialog-action="save">OK</a>
   <a data-wysihtml5-dialog-action="cancel">Cancel</a>
@@ -74,7 +74,7 @@ h2. createLink
 };
 </code></pre>
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", nofollow: "rel" });</code></pre>
+<pre><code>editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow" });</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
 
 h2. fontSize
@@ -289,3 +289,207 @@ h2. formatInline
 * Trigger via JavaScript:
 <pre><code>editorInstance.composer.commands.exec("formatInline", "span");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatInline.js
+
+h2. insertHTML
+
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="insertHTML" data-wysihtml5-command-value="<blockquote>foobar</blockquote>">insert quote</a></code></pre>
+* Required parser rules:
+_depends on the HTML that can be inserted_
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("insertHTML", "<blockquote>foobar</blockquote>");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertHTML.js
+
+h2. insertImage
+
+* Generated markup:
+<pre><code><img src="http://url.com/foo.jpg" width="100" height="100"></code></pre>
+* Toolbar element:
+<pre><code><!-- User can define the image's src: -->
+<a data-wysihtml5-command="insertImage">insert image</a>
+<div data-wysihtml5-dialog="insertImage">
+  <label>
+    Image:
+    <input data-wysihtml5-dialog-field="src" value="http://">
+  </label>
+  <a data-wysihtml5-dialog-action="save">OK</a>
+  <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+</div>
+<!-- Pre-defined src -->
+<a data-wysihtml5-command="insertImage" data-wysihtml5-command-value="http://url.com/foo.jpg">insert example image</a>
+</code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "img": {
+        "check_attributes": {
+            "width": "numbers",
+            "alt": "alt",
+            "src": "url",
+            "height": "numbers"
+        }
+    }
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("insertImage", { src: "http://url.com/foo.jpg", alt: "this is an image" });</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertImage.js
+
+h2. insertLineBreak
+
+* Generated markup:
+<pre><code><br></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="insertLineBreak">line break</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "br": 1
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("insertLineBreak");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertLineBreak.js
+
+h2. insertOrderedList
+
+* Generated markup:
+<pre><code><ol><li>text</li></ol></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="insertOrderedList">insert ordered list</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "ol": 1,
+    "li": 1
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("insertOrderedList");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertOrderedList.js
+
+h2. insertUnorderedList
+
+* Generated markup:
+<pre><code><ul><li>text</li></ul></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="insertUnorderedList">insert unordered list</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "ul": 1,
+    "li": 1
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("insertUnorderedList");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertUnorderedList.js
+
+h2. italic
+
+* Generated markup:
+<pre><code><i>text</i></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="italic">italic</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "i": 1,
+    // if you want to turn all <em> elements into <i> (optional)
+    "em": { "rename_tag": "i" }
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("italic");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/italic.js
+
+h2. justifyCenter
+
+* Generated markup:
+<pre><code><div class="wysiwyg-text-align-center">text</div></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="justifyCenter">align center</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  classes: {
+    "wysiwyg-text-align-center": 1
+  },
+  tags: {
+    "div": 1
+  }
+};</code></pre>
+* Required CSS:
+<pre><code>.wysiwyg-text-align-center {
+  text-align: center;
+}</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("justifyCenter");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyCenter.js
+
+h2. justifyLeft
+
+* Generated markup:
+<pre><code><div class="wysiwyg-text-align-left">text</div></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="justifyCenter">align left</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  classes: {
+    "wysiwyg-text-align-left": 1
+  },
+  tags: {
+    "div": 1
+  }
+};</code></pre>
+* Required CSS:
+<pre><code>.wysiwyg-text-align-left {
+  text-align: left;
+}</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("justifyLeft");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyLeft.js
+
+h2. justifyRight
+
+* Generated markup:
+<pre><code><div class="wysiwyg-text-align-right">text</div></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="justifyRight">align right</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  classes: {
+    "wysiwyg-text-align-right": 1
+  },
+  tags: {
+    "div": 1
+  }
+};</code></pre>
+* Required CSS:
+<pre><code>.wysiwyg-text-align-right {
+  text-align: right;
+}</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("justifyRight");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyRight.js
+
+h2. underline
+
+* Generated markup:
+<pre><code><u>text</u></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="underline">underline</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "u": 1
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("underline");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/underline.js
