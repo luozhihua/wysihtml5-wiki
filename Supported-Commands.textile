@@ -21,26 +21,30 @@ Below is a full list of formatting commands supported by wysihtml5.
 
 h2. bold
 
-* Generated markup
+* Generated markup:
 <pre><code><b>text</b></code></pre>
-* Toolbar element
+* Toolbar element:
 <pre><code><a data-wysihtml5-command="bold">bold</a></code></pre>
-* Required parser rules
+* Required parser rules:
 <pre><code>var wysihtml5ParserRules = {
-  tagNames: {
+  tags: {
     "b": 1
     // if you want to turn all <strong> elements into <b> (optional)
    "strong": { "rename_tag": "b" }
   }
 };
 </code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("bold");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/bold.js
 
 h2. createLink
-* Generated markup
+
+* Generated markup:
 <pre><code><!-- target="_blank" and rel="nofollow" are only set when defined in parser rules -->
 <a href="http://url" target="_blank" rel="nofollow">link</a>
 </code></pre>
-* Toolbar element
+* Toolbar element:
 <pre><code><!-- User can define the link's href: -->
 <a data-wysihtml5-command="createLink">insert link</a>
 <div data-wysihtml5-dialog="createLink">
@@ -54,9 +58,9 @@ h2. createLink
 <!-- Pre-defined href -->
 <a data-wysihtml5-command="createLink" data-wysihtml5-command-value="http://www.google.com">insert google link</a>
 </code></pre>
-* Required parser rules
+* Required parser rules:
 <pre><code>var wysihtml5ParserRules = {
-  tagNames: {
+  tags: {
     "a": {
       "check_attributes": {
         "href": "url" // make sure the entered url is really an url
@@ -69,3 +73,63 @@ h2. createLink
   }
 };
 </code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", nofollow: "rel" });</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
+
+
+h2. fontSize
+
+* Generated markup:
+<pre><code><!-- XXS -->
+<span class="wysiwyg-font-size-xx-small">text</span>
+<!-- XS -->
+<span class="wysiwyg-font-size-x-small">text</span>
+<!-- S -->
+<span class="wysiwyg-font-size-small">text</span>
+<!-- M -->
+<span class="wysiwyg-font-size-medium">text</span>
+<!-- L -->
+<span class="wysiwyg-font-size-large">text</span>
+<!-- XL -->
+<span class="wysiwyg-font-size-x-large">text</span>
+<!-- XXL -->
+<span class="wysiwyg-font-size-xx-large">text</span>
+<!-- Smaller (relative, similar to html4's <small> element) -->
+<span class="wysiwyg-font-size-smaller">text</span>
+<!-- Larger (relative, similar to html4's <big> element) -->
+<span class="wysiwyg-font-size-larger">text</span>
+</code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="small">small</a>
+<a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="large">large</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  classes: {
+    "wysiwyg-font-size-large": 1,
+    "wysiwyg-font-size-larger": 1,
+    "wysiwyg-font-size-medium": 1,
+    "wysiwyg-font-size-small": 1,
+    "wysiwyg-font-size-smaller": 1,
+    "wysiwyg-font-size-x-large": 1,
+    "wysiwyg-font-size-x-small": 1,
+    "wysiwyg-font-size-xx-large": 1,
+    "wysiwyg-font-size-xx-small": 1
+  },
+  tags: {
+    "span": 1,
+    // if you want to convert html4 elments (optional)
+    "small": {
+      "rename_tag": "span",
+      "set_class": "wysiwyg-font-size-smaller"
+    },
+    "big": {
+      "rename_tag": "span",
+      "set_class": "wysiwyg-font-size-larger"
+    },
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("fontSize", "xx-large");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/fontSize.js
