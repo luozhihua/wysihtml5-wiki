@@ -1,0 +1,19 @@
+h1. Getting Started
+
+h2. 1. Include scripts
+<pre><code><!-- wysihtml5 parser rules -->
+<script src="wysihtml5/parser_rules/advanced.js"></script>
+
+<!-- Library -->
+<script src="wysihtml5/dist/wysihtml5_0.3.0.min.js"></script></code></pre>
+
+The first script contains the html5 parser rules that are needed for wysihtml5 in order to create valid and desired markup.
+Either use one of the "existing parser rules":https://github.com/xing/wysihtml5/tree/master/parser_rules set or create your own. Check the "advanced.js parser rules":https://github.com/xing/wysihtml5/blob/master/parser_rules/advanced.js for details.
+
+The second script is the minified wysihtml5 library. It's located in the "dist":https://github.com/xing/wysihtml5/tree/master/dist folder of the repository.
+
+h2 2. Create a textarea
+
+<pre><code><form><textarea id="my-textarea"></textarea></form></code></pre>
+
+wysihtml5 takes a textarea and transforms it into a rich text editor. The textarea acts as a fallback for unsupported browsers (eg. IE < 8). Make sure the textarea element has an id, so we can later access it easily from javascript.
