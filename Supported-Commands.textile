@@ -77,7 +77,6 @@ h2. createLink
 <pre><code>editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", nofollow: "rel" });</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
 
-
 h2. fontSize
 
 * Generated markup:
@@ -100,7 +99,7 @@ h2. fontSize
 <!-- Larger (relative, similar to html4's <big> element) -->
 <span class="wysiwyg-font-size-larger">text</span>
 </code></pre>
-* Toolbar element:
+* Toolbar elements:
 <pre><code><a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="small">small</a>
 <a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="large">large</a></code></pre>
 * Required parser rules:
@@ -161,3 +160,96 @@ h2. fontSize
 * Trigger via JavaScript:
 <pre><code>editorInstance.composer.commands.exec("fontSize", "xx-large");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/fontSize.js
+
+h2. foreColor
+
+* Generated markup:
+<pre><code><!-- Red -->
+<span class="wysiwyg-font-color-red">text</span>
+<!-- Green -->
+<span class="wysiwyg-font-color-green">text</span>
+<!-- Blue -->
+<span class="wysiwyg-font-color-blue">text</span></code></pre>
+<!-- ... and many more colors possible -->
+* Toolbar elements:
+<pre><code><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
+<a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green">green</a>
+<a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue">blue</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  classes: {
+    "wysiwyg-color-aqua": 1,
+    "wysiwyg-color-black": 1,
+    "wysiwyg-color-blue": 1,
+    "wysiwyg-color-fuchsia": 1,
+    "wysiwyg-color-gray": 1,
+    "wysiwyg-color-green": 1,
+    "wysiwyg-color-lime": 1,
+    "wysiwyg-color-maroon": 1,
+    "wysiwyg-color-navy": 1,
+    "wysiwyg-color-olive": 1,
+    "wysiwyg-color-purple": 1,
+    "wysiwyg-color-red": 1,
+    "wysiwyg-color-silver": 1,
+    "wysiwyg-color-teal": 1,
+    "wysiwyg-color-white": 1,
+    "wysiwyg-color-xing": 1,
+    "wysiwyg-color-yellow": 1
+  },
+  tags: {
+    "span": 1
+  }
+};
+</code></pre>
+* Required CSS:
+<pre><code>.wysiwyg-color-black {
+  color: black;
+}
+.wysiwyg-color-silver {
+  color: silver;
+}
+.wysiwyg-color-gray {
+  color: gray;
+}
+.wysiwyg-color-white {
+  color: white;
+}
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+.wysiwyg-color-red {
+  color: red;
+}
+.wysiwyg-color-purple {
+  color: purple;
+}
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+.wysiwyg-color-green {
+  color: green;
+}
+.wysiwyg-color-lime {
+  color: lime;
+}
+.wysiwyg-color-olive {
+  color: olive;
+}
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+.wysiwyg-color-navy {
+  color: navy;
+}
+.wysiwyg-color-blue {
+  color: blue;
+}
+.wysiwyg-color-teal {
+  color: teal;
+}
+.wysiwyg-color-aqua {
+  color: aqua;
+}</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("foreColor", "yellow");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/foreColor.js
