@@ -1,0 +1,22 @@
+h1. Progressive Enhancement
+
+A step by step explanation on how wysihtml5 turns a textarea into a rich text editing interface.
+
+# Takes a <code><textarea></code>
+# Checks whether the browser supports rich text editing properly (stops here if not)
+# Sets a class "wysihtml5-supported" on the <code><body></code> of the page (can be used to toggle text hints on the page via CSS)
+# Creates an inline <code><iframe></code> with <code><body contenteditable="true"></code>
+# Copies textarea box styles (float, border, position, box-shadow, ...) to the 
+<code><iframe></code>
+# Copies textarea text styles (color, font-size, font-family, text-indent, ...) to 
+the iframe's <code><body></code>
+# Copies several attributes (spellcheck, autofocus, placeholder, className, title, ...) 
+from the <code><textarea></code> to the iframe's <code><body></code>
+# Checks whether HTMl5 autofocus and placeholder attributes are set and 
+simulates their logic on the iframe's <code><body></code>
+# Hides the <code><textarea></code>
+# Initializes sync logic (text you typed into the iframe's <code><body></code> is automatically
+copied to the hidden <code><textarea></code>)
+# Observes the form's "onsubmit" and "onreset" events and simulates their
+behavior on the iframe's <code><body></code>
+# Checks whether a toolbar is given and sets event listeners on it's link
