@@ -339,7 +339,7 @@ h2. justifyLeft <a name="justifyLeft"></a>
 * Generated markup:
 <pre><code><div class="wysiwyg-text-align-left">text</div></code></pre>
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="justifyCenter">align left</a></code></pre>
+<pre><code><a data-wysihtml5-command="justifyLeft">align left</a></code></pre>
 * Required parser rules:
 <pre><code>var wysihtml5ParserRules = {
   classes: {
