@@ -31,7 +31,7 @@ wysihtml5 offers some hidden gems. Discover them "here":https://github.com/xing/
 
 h2. Demos
 
-Check our "simple":https://xing.github.com/examples/simple.html or "advanced":https://xing.github.com/examples/advanced.html demo.
+Check the "simple":http://tifftiff.de/wysihtml5/examples/simple.html and "advanced":http://tifftiff.de/wysihtml5/examples/advanced.html demos.
 
 h2. ChangeLog
 
