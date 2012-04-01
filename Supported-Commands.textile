@@ -2,24 +2,24 @@ h1. Supported Commands
 
 Below is a full list of formatting commands supported by wysihtml5.
 
-* bold
-* createLink
-* fontSize
-* foreColor
-* formatBlock
-* formatInline
-* insertHTML
-* insertImage
-* insertLineBreak
-* insertOrderedList
-* insertUnorderedList
-* italic
-* justifyCenter
-* justifyLeft
-* justifyRight
-* underline
+* "bold":#bold
+* "createLink":#createLink
+* "fontSize":#fontSize
+* "foreColor":#foreColor
+* "formatBlock":#formatBlock
+* "formatInline":#formatInline
+* "insertHTML":#insertHTML
+* "insertImage":#insertImage
+* "insertLineBreak":#insertLineBreak
+* "insertOrderedList":#insertOrderedList
+* "insertUnorderedList":#insertUnorderedList
+* "italic":#italic
+* "justifyCenter":#justifyCenter
+* "justifyLeft":#justifyLeft
+* "justifyRight":#justifyRight
+* "underline":#underline
 
-h2. bold
+h2. bold <a name="bold"></a>
 
 * Generated markup:
 <pre><code><b>text</b></code></pre>
@@ -38,7 +38,7 @@ h2. bold
 <pre><code>editorInstance.composer.commands.exec("bold");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/bold.js
 
-h2. createLink
+h2. createLink <a name="createLink"></a>
 
 * Generated markup:
 <pre><code><!-- target="_blank" and rel="nofollow" are only set when defined in parser rules -->
@@ -55,6 +55,7 @@ h2. createLink
   <a data-wysihtml5-dialog-action="save">OK</a>
   <a data-wysihtml5-dialog-action="cancel">Cancel</a>
 </div>
+
 <!-- Pre-defined href -->
 <a data-wysihtml5-command="createLink" data-wysihtml5-command-value="http://www.google.com">insert google link</a>
 </code></pre>
@@ -77,7 +78,7 @@ h2. createLink
 <pre><code>editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow" });</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
 
-h2. fontSize
+h2. fontSize <a name="fontSize"></a>
 
 * Generated markup:
 <pre><code>
@@ -118,7 +119,7 @@ h2. fontSize
 <pre><code>editorInstance.composer.commands.exec("fontSize", "large");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/fontSize.js
 
-h2. foreColor
+h2. foreColor <a name="foreColor"></a>
 
 * Generated markup:
 <pre><code><!-- Red -->
@@ -158,7 +159,7 @@ h2. foreColor
 <pre><code>editorInstance.composer.commands.exec("foreColor", "blue");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/foreColor.js
 
-h2. formatBlock
+h2. formatBlock <a name="formatBlock"></a>
 
 *Please note:* formatBlock can be used to format the current selection into any block element (h1, h2, p, blockquote, ...). The following is an example using the H1 tag.
 * Generated markup:
@@ -176,7 +177,7 @@ h2. formatBlock
 <pre><code>editorInstance.composer.commands.exec("formatBlock", "h1");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatBlock.js
 
-h2. formatInline
+h2. formatInline <a name="formatInline"></a>
 
 *Please note:* formatInline can be used to format the current selection into any inline element (span, strong, time, ...). The following is an example using the SPAN tag.
 * Generated markup:
@@ -194,7 +195,7 @@ h2. formatInline
 <pre><code>editorInstance.composer.commands.exec("formatInline", "span");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatInline.js
 
-h2. insertHTML
+h2. insertHTML <a name="insertHTML"></a>
 
 * Toolbar element:
 <pre><code><a data-wysihtml5-command="insertHTML" data-wysihtml5-command-value="<blockquote>foobar</blockquote>">insert quote</a></code></pre>
@@ -204,7 +205,7 @@ _depends on the HTML that can be inserted_
 <pre><code>editorInstance.composer.commands.exec("insertHTML", "<blockquote>foobar</blockquote>");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertHTML.js
 
-h2. insertImage
+h2. insertImage <a name="insertImage"></a>
 
 * Generated markup:
 <pre><code><img src="http://url.com/foo.jpg" width="100" height="100"></code></pre>
@@ -219,6 +220,7 @@ h2. insertImage
   <a data-wysihtml5-dialog-action="save">OK</a>
   <a data-wysihtml5-dialog-action="cancel">Cancel</a>
 </div>
+
 <!-- Pre-defined src -->
 <a data-wysihtml5-command="insertImage" data-wysihtml5-command-value="http://url.com/foo.jpg">insert example image</a>
 </code></pre>
@@ -240,7 +242,7 @@ h2. insertImage
 <pre><code>editorInstance.composer.commands.exec("insertImage", { src: "http://url.com/foo.jpg", alt: "this is an image" });</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertImage.js
 
-h2. insertLineBreak
+h2. insertLineBreak <a name="insertLineBreak"></a>
 
 * Generated markup:
 <pre><code><br></code></pre>
@@ -257,7 +259,7 @@ h2. insertLineBreak
 <pre><code>editorInstance.composer.commands.exec("insertLineBreak");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertLineBreak.js
 
-h2. insertOrderedList
+h2. insertOrderedList <a name="insertOrderedList"></a>
 
 * Generated markup:
 <pre><code><ol><li>text</li></ol></code></pre>
@@ -275,7 +277,7 @@ h2. insertOrderedList
 <pre><code>editorInstance.composer.commands.exec("insertOrderedList");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertOrderedList.js
 
-h2. insertUnorderedList
+h2. insertUnorderedList <a name="insertUnorderedList"></a>
 
 * Generated markup:
 <pre><code><ul><li>text</li></ul></code></pre>
@@ -293,7 +295,7 @@ h2. insertUnorderedList
 <pre><code>editorInstance.composer.commands.exec("insertUnorderedList");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertUnorderedList.js
 
-h2. italic
+h2. italic <a name="italic"></a>
 
 * Generated markup:
 <pre><code><i>text</i></code></pre>
@@ -312,7 +314,7 @@ h2. italic
 <pre><code>editorInstance.composer.commands.exec("italic");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/italic.js
 
-h2. justifyCenter
+h2. justifyCenter <a name="justifyCenter"></a>
 
 * Generated markup:
 <pre><code><div class="wysiwyg-text-align-center">text</div></code></pre>
@@ -335,7 +337,7 @@ h2. justifyCenter
 <pre><code>editorInstance.composer.commands.exec("justifyCenter");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyCenter.js
 
-h2. justifyLeft
+h2. justifyLeft <a name="justifyLeft"></a>
 
 * Generated markup:
 <pre><code><div class="wysiwyg-text-align-left">text</div></code></pre>
@@ -358,7 +360,7 @@ h2. justifyLeft
 <pre><code>editorInstance.composer.commands.exec("justifyLeft");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyLeft.js
 
-h2. justifyRight
+h2. justifyRight <a name="justifyRight"></a>
 
 * Generated markup:
 <pre><code><div class="wysiwyg-text-align-right">text</div></code></pre>
@@ -381,7 +383,7 @@ h2. justifyRight
 <pre><code>editorInstance.composer.commands.exec("justifyRight");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyRight.js
 
-h2. underline
+h2. underline <a name="underline"></a>
 
 * Generated markup:
 <pre><code><u>text</u></code></pre>
