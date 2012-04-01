@@ -11,7 +11,7 @@ The "getting started guide":https://github.com/xing/wysihtml5/wiki/Getting-Start
 
 h2. API docs
 
-The "API docs":https://github.com/xing/wysihtml5/API provide you with a complete reference of available JS methods.
+wysihtml5 supports a variety of formatting commands. A full documentation can be "found here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
 
 h2. Demos
 
