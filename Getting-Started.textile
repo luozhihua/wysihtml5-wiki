@@ -56,7 +56,7 @@ var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea elem
 });
 </script></code></pre>
 
-wysihtml5.Editor supports many more "configuration options":https://github.com/xing/wysihtml5/wiki/Configuration.
+wysihtml5 supports many more "configuration options":https://github.com/xing/wysihtml5/wiki/Configuration.
 
 h2. 5. There you go
 
