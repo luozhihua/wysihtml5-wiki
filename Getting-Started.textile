@@ -3,9 +3,9 @@ h1. Getting Started
 h2. 1. Include scripts
 
 <pre><code><!-- wysihtml5 parser rules -->
-<script src="wysihtml5/parser_rules/advanced.js"></script>
+<script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>
 <!-- Library -->
-<script src="wysihtml5/dist/wysihtml5_0.3.0.min.js"></script></code></pre>
+<script src="/path-to-wysihtml5/dist/wysihtml5_0.3.0.min.js"></script></code></pre>
 
 * The first script contains the html5 parser rules that are needed for wysihtml5 in order to create valid and desired markup.
 Either use one of the "existing parser rules set":https://github.com/xing/wysihtml5/tree/master/parser_rules or create your own.
@@ -42,7 +42,22 @@ h2. 3. Create a toolbar
   </div>
 </div></code></pre>
 
-The toolbar contains the formatting options. Make sure the toolbar element has an id and is hidden.
+The toolbar contains the formatting options. Make sure the toolbar element has an id and has <code>display: none</code>.
 
 *Please note:* wysihtml5 supports many more formatting commands. Check the "advanced demo":https://github.com/xing/wysihtml5/blob/master/examples/advanced.html or find a full list of "all supported commands here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
 
+h2. 4. Initialize wysihtml5
+
+<pre><code><script>
+var editor = new wysihtml5.Editor("wysihtml5-textarea", {
+  toolbar:      "wysihtml5-toolbar", // id of toolbar element
+  parserRules:  wysihtml5ParserRules // defined in parser rules set
+});
+</script></code></pre>
+
+wysihtml5.Editor supports many more "configuration options":https://github.com/xing/wysihtml5/wiki/Configuration.
+
+h2. 5. There you go
+
+Congrats you just integrated wysihtml5 into your website.
+Now enjoy a cold beer or consider checking out the full "JavaScript API reference":https://github.com/xing/wysihtml5/API.
