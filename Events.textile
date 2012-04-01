@@ -5,12 +5,14 @@ The editor supports a variety of events that developers may hook into.
 h2. Usage
 
 <pre><code>var editor = new wyishtml5.Editor("textarea-id");
-editor.on("change", function() {
-  alert("The content of the editor has changed")
-});
-editor.on("load", function() {
-  alert("wysihtml5 is ready for take off!");
-});
+var onChange = function() { alert("The content of the editor has changed"); };
+var onLoad = function() { alert("Go!"); };
+// observe
+editor.on("change", onChange);
+editor.on("load", onLoad);
+// unobserve
+editor.stopObserving("onChange", onChange);
+editor.stopObserving("onChange", onLoad);
 </code></pre>
 
 h2.  List of supported events:
