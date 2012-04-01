@@ -14,9 +14,10 @@ Check the "advanced.js parser rules":https://github.com/xing/wysihtml5/blob/mast
 
 h2. 2. Create a textarea
 
-<pre><code><form><textarea id="wysihtml5-textarea"></textarea></form></code></pre>
+<pre><code><form><textarea id="wysihtml5-textarea" placeholder="Enter your text ..." autofocus></textarea></form></code></pre>
 
 wysihtml5 takes a textarea and transforms it into a rich text editor. The textarea acts as a fallback for unsupported browsers (eg. IE < 8). Make sure the textarea element has an id, so we can later access it easily from javascript.
+The resulting rich text editor will much behave and look like the textarea since behavior (placeholder, autofocus, ...) and css styles will be copied over.
 
 *Please note:* The textarea will always hold the editor's generated markup. Therefore wysihtml5 integrates smoothly with forms.
 
@@ -49,9 +50,9 @@ The toolbar contains the formatting options. Make sure the toolbar element has a
 h2. 4. Initialize wysihtml5
 
 <pre><code><script>
-var editor = new wysihtml5.Editor("wysihtml5-textarea", {
+var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
   toolbar:      "wysihtml5-toolbar", // id of toolbar element
-  parserRules:  wysihtml5ParserRules // defined in parser rules set
+  parserRules:  wysihtml5ParserRules // defined in parser rules set 
 });
 </script></code></pre>
 
