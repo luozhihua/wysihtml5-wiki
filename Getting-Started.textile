@@ -12,7 +12,7 @@ Either use one of the "existing parser rules":https://github.com/xing/wysihtml5/
 
 The second script is the minified wysihtml5 library. It's located in the "dist":https://github.com/xing/wysihtml5/tree/master/dist folder of the repository.
 
-h2 2. Create a textarea
+h2. 2. Create a textarea
 
 <pre><code><form><textarea id="my-textarea"></textarea></form></code></pre>
 
