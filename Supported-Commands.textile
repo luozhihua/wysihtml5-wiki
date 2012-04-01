@@ -1,0 +1,71 @@
+h1. Supported Commands
+
+Below is a full list of formatting commands supported by wysihtml5.
+
+* bold
+* createLink
+* fontSize
+* foreColor
+* formatBlock
+* formatInline
+* insertHTML
+* insertImage
+* insertLineBreak
+* insertOrderedList
+* insertUnorderedList
+* italic
+* justifyCenter
+* justifyLeft
+* justifyRight
+* underline
+
+h2. bold
+
+* Generated markup
+<pre><code><b>text</b></code></pre>
+* Toolbar element
+<pre><code><a data-wysihtml5-command="bold">bold</a></code></pre>
+* Required parser rules
+<pre><code>var wysihtml5ParserRules = {
+  tagNames: {
+    "b": 1
+    // if you want to turn all <strong> elements into <b> (optional)
+   "strong": { "rename_tag": "b" }
+  }
+};
+</code></pre>
+
+h2. createLink
+* Generated markup
+<pre><code><!-- target="_blank" and rel="nofollow" are only set when defined in parser rules -->
+<a href="http://url" target="_blank" rel="nofollow">link</a>
+</code></pre>
+* Toolbar element
+<pre><code><!-- User can define the link's href: -->
+<a data-wysihtml5-command="createLink">insert link</a>
+<div data-wysihtml5-dialog="createLink">
+  <label>
+    Link:
+    <input data-wysihtml5-dialog-field="href" value="http://" class="text">
+  </label>
+  <a data-wysihtml5-dialog-action="save">OK</a>
+  <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+</div>
+<!-- Pre-defined href -->
+<a data-wysihtml5-command="createLink" data-wysihtml5-command-value="http://www.google.com">insert google link</a>
+</code></pre>
+* Required parser rules
+<pre><code>var wysihtml5ParserRules = {
+  tagNames: {
+    "a": {
+      "check_attributes": {
+        "href": "url" // make sure the entered url is really an url
+      },
+      "set_attributes": {
+        "rel": "nofollow",   // optional
+        "target": "_blank"   // optional
+      }
+    }
+  }
+};
+</code></pre>
