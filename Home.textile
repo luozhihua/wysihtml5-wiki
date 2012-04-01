@@ -13,9 +13,13 @@ h2. Configuration
 
 Find a list of all wysihtml5 configuration options "here":https://github.com/xing/wysihtml5/wiki/Configuration.
 
-h2. Supported Commands
+h2. Commands
 
 wysihtml5 supports a variety of formatting commands. A full documentation can be "found here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
+
+h2. Events
+
+You can hook into wyishtml5's "custom events":https://github.com/xing/wysihtml5/wiki/Events and build custom functionality on top of it.
 
 h2. Demos
 
