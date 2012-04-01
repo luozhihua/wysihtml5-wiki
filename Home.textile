@@ -23,7 +23,7 @@ You can hook into wyishtml5's "custom events":https://github.com/xing/wysihtml5/
 
 h2. Progressive Enhancement
 
-"Step by step explanation":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement of how the editor turns a textarea into a rich text editing interface.
+"Step by step explanation":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement on how the editor turns a textarea into a rich text editing interface.
 
 h2. Neat Extras
 
@@ -39,4 +39,4 @@ The official CHANGELOG can always be found "here":https://github.com/xing/wysiht
 
 h2. Contribute
 
-Learn how to "compile and test":https://github.com/xing/wysihtml5/wiki/Contribute your changes to wysihtml5.
+Learn how to "compile, test and contribute":https://github.com/xing/wysihtml5/wiki/Contribute your changes to wysihtml5.
