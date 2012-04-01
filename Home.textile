@@ -9,7 +9,7 @@ h2. Getting Started
 
 The "getting started guide":https://github.com/xing/wysihtml5/wiki/Getting-Started explains how to integrate wysihtml5 easily into your website.
 
-h2. Configuration Options
+h2. Configuration
 
 Find a list of all wysihtml5 configuration options "here":https://github.com/xing/wysihtml5/wiki/Configuration.
 
