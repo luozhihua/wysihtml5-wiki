@@ -118,7 +118,7 @@ h2. fontSize
   },
   tags: {
     "span": 1,
-    // if you want to convert html4 elments (optional)
+    // if you want to transform html4 elements to valid html5 (optional)
     "small": {
       "rename_tag": "span",
       "set_class": "wysiwyg-font-size-smaller"
@@ -126,10 +126,38 @@ h2. fontSize
     "big": {
       "rename_tag": "span",
       "set_class": "wysiwyg-font-size-larger"
-    },
+    }
   }
 };
 </code></pre>
+* Required CSS:
+<pre><code>.wysiwyg-font-size-smaller {
+  font-size: smaller;
+}
+.wysiwyg-font-size-larger {
+  font-size: larger;
+}
+.wysiwyg-font-size-xx-large {
+  font-size: xx-large;
+}
+.wysiwyg-font-size-x-large {
+  font-size: x-large;
+}
+.wysiwyg-font-size-large {
+  font-size: large;
+}
+.wysiwyg-font-size-medium {
+  font-size: medium;
+}
+.wysiwyg-font-size-small {
+  font-size: small;
+}
+.wysiwyg-font-size-x-small {
+  font-size: x-small;
+}
+.wysiwyg-font-size-xx-small {
+  font-size: xx-small;
+}</code></pre>
 * Trigger via JavaScript:
 <pre><code>editorInstance.composer.commands.exec("fontSize", "xx-large");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/fontSize.js
