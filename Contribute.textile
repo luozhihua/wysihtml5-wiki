@@ -1,0 +1,12 @@
+h1. Stop complaining, start contributing!
+
+# Fork
+# Implement your changes
+# Compile
+<pre><code>make</code></pre>
+# Make sure your code works in all supported browsers (Check "README":https://github.com/xing/wysihtml5/#readme)
+# Write tests (if possible)
+# Run the tests
+<pre><code>make unittest</code></pre>
+# If tests pass create a "pull request":http://help.github.com/send-pull-requests/ _(please exclude the compiled files from the pull request)_
+# Receive feedback and praise. *Thanks!*
