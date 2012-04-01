@@ -8,5 +8,5 @@ h1. Stop complaining, start contributing!
 # Write tests (if possible)
 # Run the tests
 <pre><code>make unittest</code></pre>
-# If tests pass create a "pull request":http://help.github.com/send-pull-requests/ _(please exclude the compiled files from the pull request)_
+# If tests pass create a "pull request":http://help.github.com/send-pull-requests/ _(please exclude the compiled files)_
 # Receive feedback and praise. *Thanks!*
