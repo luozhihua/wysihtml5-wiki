@@ -169,8 +169,8 @@ h2. foreColor
 <!-- Green -->
 <span class="wysiwyg-font-color-green">text</span>
 <!-- Blue -->
-<span class="wysiwyg-font-color-blue">text</span></code></pre>
-<!-- ... and many more colors possible -->
+<span class="wysiwyg-font-color-blue">text</span>
+<!-- ... and many more colors possible --></code></pre>
 * Toolbar elements:
 <pre><code><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
 <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green">green</a>
@@ -253,3 +253,39 @@ h2. foreColor
 * Trigger via JavaScript:
 <pre><code>editorInstance.composer.commands.exec("foreColor", "yellow");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/foreColor.js
+
+h2. formatBlock
+
+*Please note:* formatBlock can be used to format the current selection into any block element (h1, h2, p, blockquote, ...). The following is an example using the H1 tag.
+* Generated markup:
+<pre><code><h1>text</h1></code></pre></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">heading 1</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "h1": 1
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("formatBlock", "h1");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatBlock.js
+
+h2. formatInline
+
+*Please note:* formatInline can be used to format the current selection into any inline element (span, strong, time, ...). The following is an example using the SPAN tag.
+* Generated markup:
+<pre><code><span>text</span></code></pre></code></pre>
+* Toolbar element:
+<pre><code><a data-wysihtml5-command="formatInline" data-wysihtml5-command-value="span">span</a></code></pre>
+* Required parser rules:
+<pre><code>var wysihtml5ParserRules = {
+  tags: {
+    "span": 1
+  }
+};
+</code></pre>
+* Trigger via JavaScript:
+<pre><code>editorInstance.composer.commands.exec("formatInline", "span");</code></pre>
+* "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatInline.js
