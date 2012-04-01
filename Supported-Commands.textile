@@ -80,8 +80,7 @@ h2. createLink
 h2. fontSize
 
 * Generated markup:
-<pre><code><!-- XXS -->
-<span class="wysiwyg-font-size-xx-small">text</span>
+<pre><code>
 <!-- XS -->
 <span class="wysiwyg-font-size-x-small">text</span>
 <!-- S -->
@@ -92,12 +91,7 @@ h2. fontSize
 <span class="wysiwyg-font-size-large">text</span>
 <!-- XL -->
 <span class="wysiwyg-font-size-x-large">text</span>
-<!-- XXL -->
-<span class="wysiwyg-font-size-xx-large">text</span>
-<!-- Smaller (relative, similar to html4's <small> element) -->
-<span class="wysiwyg-font-size-smaller">text</span>
-<!-- Larger (relative, similar to html4's <big> element) -->
-<span class="wysiwyg-font-size-larger">text</span>
+<!-- ... and many more font sizes possible --->
 </code></pre>
 * Toolbar elements:
 <pre><code><a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="small">small</a>
@@ -106,59 +100,22 @@ h2. fontSize
 <pre><code>var wysihtml5ParserRules = {
   classes: {
     "wysiwyg-font-size-large": 1,
-    "wysiwyg-font-size-larger": 1,
-    "wysiwyg-font-size-medium": 1,
-    "wysiwyg-font-size-small": 1,
-    "wysiwyg-font-size-smaller": 1,
-    "wysiwyg-font-size-x-large": 1,
-    "wysiwyg-font-size-x-small": 1,
-    "wysiwyg-font-size-xx-large": 1,
-    "wysiwyg-font-size-xx-small": 1
+    "wysiwyg-font-size-small": 1
   },
   tags: {
-    "span": 1,
-    // if you want to transform html4 elements to valid html5 (optional)
-    "small": {
-      "rename_tag": "span",
-      "set_class": "wysiwyg-font-size-smaller"
-    },
-    "big": {
-      "rename_tag": "span",
-      "set_class": "wysiwyg-font-size-larger"
-    }
+    "span": 1
   }
 };
 </code></pre>
 * Required CSS:
-<pre><code>.wysiwyg-font-size-smaller {
-  font-size: smaller;
-}
-.wysiwyg-font-size-larger {
-  font-size: larger;
-}
-.wysiwyg-font-size-xx-large {
-  font-size: xx-large;
-}
-.wysiwyg-font-size-x-large {
-  font-size: x-large;
-}
-.wysiwyg-font-size-large {
+<pre><code>.wysiwyg-font-size-large {
   font-size: large;
-}
-.wysiwyg-font-size-medium {
-  font-size: medium;
 }
 .wysiwyg-font-size-small {
   font-size: small;
-}
-.wysiwyg-font-size-x-small {
-  font-size: x-small;
-}
-.wysiwyg-font-size-xx-small {
-  font-size: xx-small;
 }</code></pre>
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("fontSize", "xx-large");</code></pre>
+<pre><code>editorInstance.composer.commands.exec("fontSize", "large");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/fontSize.js
 
 h2. foreColor
@@ -178,23 +135,9 @@ h2. foreColor
 * Required parser rules:
 <pre><code>var wysihtml5ParserRules = {
   classes: {
-    "wysiwyg-color-aqua": 1,
-    "wysiwyg-color-black": 1,
     "wysiwyg-color-blue": 1,
-    "wysiwyg-color-fuchsia": 1,
-    "wysiwyg-color-gray": 1,
     "wysiwyg-color-green": 1,
-    "wysiwyg-color-lime": 1,
-    "wysiwyg-color-maroon": 1,
-    "wysiwyg-color-navy": 1,
-    "wysiwyg-color-olive": 1,
-    "wysiwyg-color-purple": 1,
-    "wysiwyg-color-red": 1,
-    "wysiwyg-color-silver": 1,
-    "wysiwyg-color-teal": 1,
-    "wysiwyg-color-white": 1,
-    "wysiwyg-color-xing": 1,
-    "wysiwyg-color-yellow": 1
+    "wysiwyg-color-red": 1
   },
   tags: {
     "span": 1
@@ -202,56 +145,17 @@ h2. foreColor
 };
 </code></pre>
 * Required CSS:
-<pre><code>.wysiwyg-color-black {
-  color: black;
-}
-.wysiwyg-color-silver {
-  color: silver;
-}
-.wysiwyg-color-gray {
-  color: gray;
-}
-.wysiwyg-color-white {
-  color: white;
-}
-.wysiwyg-color-maroon {
-  color: maroon;
-}
-.wysiwyg-color-red {
+<pre><code>.wysiwyg-color-red {
   color: red;
-}
-.wysiwyg-color-purple {
-  color: purple;
-}
-.wysiwyg-color-fuchsia {
-  color: fuchsia;
 }
 .wysiwyg-color-green {
   color: green;
 }
-.wysiwyg-color-lime {
-  color: lime;
-}
-.wysiwyg-color-olive {
-  color: olive;
-}
-.wysiwyg-color-yellow {
-  color: yellow;
-}
-.wysiwyg-color-navy {
-  color: navy;
-}
 .wysiwyg-color-blue {
   color: blue;
-}
-.wysiwyg-color-teal {
-  color: teal;
-}
-.wysiwyg-color-aqua {
-  color: aqua;
 }</code></pre>
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("foreColor", "yellow");</code></pre>
+<pre><code>editorInstance.composer.commands.exec("foreColor", "blue");</code></pre>
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/foreColor.js
 
 h2. formatBlock
