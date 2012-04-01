@@ -25,6 +25,10 @@ h2. Progressive Enhancement
 
 "Step by step explanation":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement of how the editor turns a textarea into a rich text editing interface.
 
+h2. Neat Extras
+
+wysihtml5 offers some hidden gems. Discover them "here":https://github.com/xing/wysihtml5/wiki/Neat-Extras.
+
 h2. Demos
 
 Check our "simple":https://xing.github.com/examples/simple.html or "advanced":https://xing.github.com/examples/advanced.html demo.
