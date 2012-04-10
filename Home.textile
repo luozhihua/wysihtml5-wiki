@@ -15,7 +15,7 @@ Find a list of all wysihtml5 configuration options "here":https://github.com/xin
 
 h2. Commands
 
-wysihtml5 supports a variety of formatting commands. A full documentation can be "found here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
+wysihtml5 supports a variety of formatting commands. A full documentation can be found "here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
 
 h2. Events
 
@@ -25,17 +25,21 @@ h2. Progressive Enhancement
 
 "Step by step explanation":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement on how the editor turns a textarea into a rich text editing interface.
 
-h2. Neat Extras
+h2. Hidden Gems
 
-wysihtml5 offers some hidden gems. Discover them "here":https://github.com/xing/wysihtml5/wiki/Neat-Extras.
+wysihtml5 offers some neat extras. Discover them "here":https://github.com/xing/wysihtml5/wiki/Neat-Extras.
 
 h2. Demos
 
 Check the "simple":http://tifftiff.de/wysihtml5/examples/simple.html and "advanced":http://tifftiff.de/wysihtml5/examples/advanced.html demos.
 
-h2. ChangeLog
+h2. Plugins
 
-The official CHANGELOG can always be found "here":https://github.com/xing/wysihtml5/blob/master/CHANGELOG.textile.
+Find a list of projects using wysihtml5 "here":https://github.com/xing/wysihtml5/wiki/Plugins.
+
+h2. Change Log
+
+The official change log can always be found "here":https://github.com/xing/wysihtml5/blob/master/CHANGELOG.textile.
 
 h2. Contribute
 
