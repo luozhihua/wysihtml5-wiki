@@ -2,10 +2,12 @@ h1. Getting Started
 
 h2. 1. Include scripts
 
-<pre><code><!-- wysihtml5 parser rules -->
+```html
+<!-- wysihtml5 parser rules -->
 <script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>
 <!-- Library -->
-<script src="/path-to-wysihtml5/dist/wysihtml5_0.3.0.min.js"></script></code></pre>
+<script src="/path-to-wysihtml5/dist/wysihtml5_0.3.0.min.js"></script>
+```
 
 * The first script contains the html5 parser rules that are needed for wysihtml5 in order to create valid and desired markup.
 Either use one of the "existing parser rules sets":https://github.com/xing/wysihtml5/tree/master/parser_rules or create your own.
@@ -14,7 +16,10 @@ Check the "advanced.js parser rules":https://github.com/xing/wysihtml5/blob/mast
 
 h2. 2. Create a textarea
 
-<pre><code><form><textarea id="wysihtml5-textarea" placeholder="Enter your text ..." autofocus></textarea></form></code></pre>
+```html
+<form><textarea id="wysihtml5-textarea" placeholder="Enter your text ..." autofocus></textarea></form>
+```
+
 
 wysihtml5 takes a textarea and transforms it into a rich text editor. The textarea acts as a fallback for unsupported browsers (eg. IE < 8). Make sure the textarea element has an id, so we can later access it easily from javascript.
 The resulting rich text editor will much behave and look like the textarea since behavior (placeholder, autofocus, ...) and css styles will be copied over.
@@ -23,7 +28,8 @@ The resulting rich text editor will much behave and look like the textarea since
 
 h2. 3. Create a toolbar
 
-<pre><code><div id="wysihtml5-toolbar" style="display: none;">
+```html
+<div id="wysihtml5-toolbar" style="display: none;">
   <a data-wysihtml5-command="bold">bold</a>
   <a data-wysihtml5-command="italic">italic</a>
   
@@ -41,7 +47,8 @@ h2. 3. Create a toolbar
     </label>
     <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
   </div>
-</div></code></pre>
+</div>
+```
 
 The toolbar contains the formatting options. Make sure the toolbar element has an id and has <code>display: none</code>.
 
@@ -49,12 +56,14 @@ The toolbar contains the formatting options. Make sure the toolbar element has a
 
 h2. 4. Initialize wysihtml5
 
-<pre><code><script>
+```html
+<script>
 var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
   toolbar:      "wysihtml5-toolbar", // id of toolbar element
   parserRules:  wysihtml5ParserRules // defined in parser rules set 
 });
-</script></code></pre>
+</script>
+```
 
 wysihtml5 supports many more "configuration options":https://github.com/xing/wysihtml5/wiki/Configuration.
 
