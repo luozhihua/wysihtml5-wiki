@@ -2,7 +2,8 @@ h1. Configuration
 
 Following is a list of all configuration parameters with their corresponding default values:
 
-<pre><code>new wysihtml5.Editor("textarea-id", {
+```javascript
+new wysihtml5.Editor("textarea-id", {
   // Give the editor a name, the name will also be set as class name on the iframe and on the iframe's body
   name:                 null,
   // Whether the editor should look like the textarea (by adopting styles)
@@ -27,4 +28,5 @@ Following is a list of all configuration parameters with their corresponding def
   allowObjectResizing:  true,
   // Whether the rich text editor should be rendered on touch devices (wysihtml5 >= 0.3.0 comes with basic support for iOS 5)
   supportTouchDevices:  true
-});</code></pre>
+});
+```
