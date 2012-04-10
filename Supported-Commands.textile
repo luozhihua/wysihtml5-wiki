@@ -22,30 +22,39 @@ Below is a full list of formatting commands supported by wysihtml5.
 h2. bold <a name="bold"></a>
 
 * Generated markup:
-<pre><code><b>text</b></code></pre>
+```html
+<b>text</b>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="bold">bold</a></code></pre>
+```html
+<a data-wysihtml5-command="bold">bold</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "b": 1,
     // if you want to turn all <strong> elements into <b> (optional)
    "strong": { "rename_tag": "b" }
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("bold");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("bold");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/bold.js
 
 h2. createLink <a name="createLink"></a>
 
 * Generated markup:
-<pre><code><!-- target="_blank" and rel="nofollow" are only set when defined in parser rules -->
+```html
+<!-- target="_blank" and rel="nofollow" are only set when defined in parser rules -->
 <a href="http://url" target="_blank" rel="nofollow">link</a>
-</code></pre>
+```
 * Toolbar element:
-<pre><code><!-- User can define the link's href: -->
+```html
+<!-- User can define the link's href: -->
 <a data-wysihtml5-command="createLink">insert link</a>
 <div data-wysihtml5-dialog="createLink">
   <label>
@@ -57,9 +66,10 @@ h2. createLink <a name="createLink"></a>
 </div>
 <!-- Pre-defined href -->
 <a data-wysihtml5-command="createLink" data-wysihtml5-command-value="http://www.google.com">insert google link</a>
-</code></pre>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "a": {
       "check_attributes": {
@@ -72,15 +82,18 @@ h2. createLink <a name="createLink"></a>
     }
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow" });</code></pre>
+```javascript
+editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow" });
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
 
 h2. fontSize <a name="fontSize"></a>
 
 * Generated markup:
-<pre><code><!-- XS -->
+```html
+<!-- XS -->
 <span class="wysiwyg-font-size-x-small">text</span>
 <!-- S -->
 <span class="wysiwyg-font-size-small">text</span>
@@ -91,12 +104,15 @@ h2. fontSize <a name="fontSize"></a>
 <!-- XL -->
 <span class="wysiwyg-font-size-x-large">text</span>
 <!-- ... and many more font sizes possible --->
-</code></pre>
+```
 * Toolbar elements:
-<pre><code><a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="small">small</a>
-<a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="large">large</a></code></pre>
+```html
+<a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="small">small</a>
+<a data-wysihtml5-command="fontSize" data-wysihtml5-command-value="large">large</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   classes: {
     "wysiwyg-font-size-large": 1,
     "wysiwyg-font-size-small": 1
@@ -105,34 +121,43 @@ h2. fontSize <a name="fontSize"></a>
     "span": 1
   }
 };
-</code></pre>
+```
 * Required CSS:
-<pre><code>.wysiwyg-font-size-large {
+```css
+.wysiwyg-font-size-large {
   font-size: large;
 }
 .wysiwyg-font-size-small {
   font-size: small;
-}</code></pre>
+}
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("fontSize", "large");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("fontSize", "large");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/fontSize.js
 
 h2. foreColor <a name="foreColor"></a>
 
 * Generated markup:
-<pre><code><!-- Red -->
+```html
+<!-- Red -->
 <span class="wysiwyg-font-color-red">text</span>
 <!-- Green -->
 <span class="wysiwyg-font-color-green">text</span>
 <!-- Blue -->
 <span class="wysiwyg-font-color-blue">text</span>
-<!-- ... and many more colors possible --></code></pre>
+<!-- ... and many more colors possible -->
+```
 * Toolbar elements:
-<pre><code><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
+```html
+<a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
 <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green">green</a>
-<a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue">blue</a></code></pre>
+<a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue">blue</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   classes: {
     "wysiwyg-color-blue": 1,
     "wysiwyg-color-green": 1,
@@ -142,9 +167,10 @@ h2. foreColor <a name="foreColor"></a>
     "span": 1
   }
 };
-</code></pre>
+```
 * Required CSS:
-<pre><code>.wysiwyg-color-red {
+```css
+.wysiwyg-color-red {
   color: red;
 }
 .wysiwyg-color-green {
@@ -152,63 +178,87 @@ h2. foreColor <a name="foreColor"></a>
 }
 .wysiwyg-color-blue {
   color: blue;
-}</code></pre>
+}
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("foreColor", "blue");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("foreColor", "blue");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/foreColor.js
 
 h2. formatBlock <a name="formatBlock"></a>
 
 *Please note:* formatBlock can be used to format the current selection into any block element (h1, h2, p, blockquote, ...). The following is an example using the H1 tag.
 * Generated markup:
-<pre><code><h1>text</h1></code></pre></code></pre>
+```html
+<h1>text</h1>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">heading 1</a></code></pre>
+```html
+<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">heading 1</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "h1": 1
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("formatBlock", "h1");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("formatBlock", "h1");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatBlock.js
 
 h2. formatInline <a name="formatInline"></a>
 
 *Please note:* formatInline can be used to format the current selection into any inline element (span, strong, time, ...). The following is an example using the SPAN tag.
 * Generated markup:
-<pre><code><span>text</span></code></pre></code></pre>
+```html
+<span>text</span>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="formatInline" data-wysihtml5-command-value="span">span</a></code></pre>
+```html
+<a data-wysihtml5-command="formatInline" data-wysihtml5-command-value="span">span</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "span": 1
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("formatInline", "span");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("formatInline", "span");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/formatInline.js
 
 h2. insertHTML <a name="insertHTML"></a>
 
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="insertHTML" data-wysihtml5-command-value="<blockquote>foobar</blockquote>">insert quote</a></code></pre>
+```html
+<a data-wysihtml5-command="insertHTML" data-wysihtml5-command-value="<blockquote>foobar</blockquote>">insert quote</a>
+```
 * Required parser rules:
 _depends on the HTML that can be inserted_
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("insertHTML", "<blockquote>foobar</blockquote>");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("insertHTML", "<blockquote>foobar</blockquote>");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertHTML.js
 
 h2. insertImage <a name="insertImage"></a>
 
 * Generated markup:
-<pre><code><img src="http://url.com/foo.jpg" width="100" height="100"></code></pre>
+```html
+<img src="http://url.com/foo.jpg" width="100" height="100">
+```
 * Toolbar element:
-<pre><code><!-- User can define the image's src: -->
+```html
+<!-- User can define the image's src: -->
 <a data-wysihtml5-command="insertImage">insert image</a>
 <div data-wysihtml5-dialog="insertImage">
   <label>
@@ -220,9 +270,10 @@ h2. insertImage <a name="insertImage"></a>
 </div>
 <!-- Pre-defined src -->
 <a data-wysihtml5-command="insertImage" data-wysihtml5-command-value="http://url.com/foo.jpg">insert example image</a>
-</code></pre>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "img": {
         "check_attributes": {
@@ -234,165 +285,232 @@ h2. insertImage <a name="insertImage"></a>
     }
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("insertImage", { src: "http://url.com/foo.jpg", alt: "this is an image" });</code></pre>
+```javascript
+editorInstance.composer.commands.exec("insertImage", { src: "http://url.com/foo.jpg", alt: "this is an image" });
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertImage.js
 
 h2. insertLineBreak <a name="insertLineBreak"></a>
 
 * Generated markup:
-<pre><code><br></code></pre>
+```html
+<br>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="insertLineBreak">line break</a></code></pre>
+```html
+<a data-wysihtml5-command="insertLineBreak">line break</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "br": 1
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("insertLineBreak");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("insertLineBreak");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertLineBreak.js
 
 h2. insertOrderedList <a name="insertOrderedList"></a>
 
 * Generated markup:
-<pre><code><ol><li>text</li></ol></code></pre>
+```html
+<ol><li>text</li></ol>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="insertOrderedList">insert ordered list</a></code></pre>
+```html
+<a data-wysihtml5-command="insertOrderedList">insert ordered list</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "ol": 1,
     "li": 1
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("insertOrderedList");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("insertOrderedList");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertOrderedList.js
 
 h2. insertUnorderedList <a name="insertUnorderedList"></a>
 
 * Generated markup:
-<pre><code><ul><li>text</li></ul></code></pre>
+```html
+<ul><li>text</li></ul>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="insertUnorderedList">insert unordered list</a></code></pre>
+```html
+<a data-wysihtml5-command="insertUnorderedList">insert unordered list</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "ul": 1,
     "li": 1
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("insertUnorderedList");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("insertUnorderedList");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/insertUnorderedList.js
 
 h2. italic <a name="italic"></a>
 
 * Generated markup:
-<pre><code><i>text</i></code></pre>
+```html
+<i>text</i>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="italic">italic</a></code></pre>
+```html
+<a data-wysihtml5-command="italic">italic</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "i": 1,
     // if you want to turn all <em> elements into <i> (optional)
     "em": { "rename_tag": "i" }
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("italic");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("italic");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/italic.js
 
 h2. justifyCenter <a name="justifyCenter"></a>
 
 * Generated markup:
-<pre><code><div class="wysiwyg-text-align-center">text</div></code></pre>
+```html
+<div class="wysiwyg-text-align-center">text</div>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="justifyCenter">align center</a></code></pre>
+```html
+<a data-wysihtml5-command="justifyCenter">align center</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   classes: {
     "wysiwyg-text-align-center": 1
   },
   tags: {
     "div": 1
   }
-};</code></pre>
+};
+```
 * Required CSS:
-<pre><code>.wysiwyg-text-align-center {
+```css
+.wysiwyg-text-align-center {
   text-align: center;
-}</code></pre>
+}
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("justifyCenter");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("justifyCenter");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyCenter.js
 
 h2. justifyLeft <a name="justifyLeft"></a>
 
 * Generated markup:
-<pre><code><div class="wysiwyg-text-align-left">text</div></code></pre>
+```html
+<div class="wysiwyg-text-align-left">text</div>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="justifyLeft">align left</a></code></pre>
+```html
+<a data-wysihtml5-command="justifyLeft">align left</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   classes: {
     "wysiwyg-text-align-left": 1
   },
   tags: {
     "div": 1
   }
-};</code></pre>
+};
+```
 * Required CSS:
-<pre><code>.wysiwyg-text-align-left {
+```css
+.wysiwyg-text-align-left {
   text-align: left;
-}</code></pre>
+}
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("justifyLeft");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("justifyLeft");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyLeft.js
 
 h2. justifyRight <a name="justifyRight"></a>
 
 * Generated markup:
-<pre><code><div class="wysiwyg-text-align-right">text</div></code></pre>
+```html
+<div class="wysiwyg-text-align-right">text</div>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="justifyRight">align right</a></code></pre>
+```html
+<a data-wysihtml5-command="justifyRight">align right</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   classes: {
     "wysiwyg-text-align-right": 1
   },
   tags: {
     "div": 1
   }
-};</code></pre>
+};
+```
 * Required CSS:
-<pre><code>.wysiwyg-text-align-right {
+```css
+.wysiwyg-text-align-right {
   text-align: right;
-}</code></pre>
+}
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("justifyRight");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("justifyRight");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyRight.js
 
 h2. underline <a name="underline"></a>
 
 * Generated markup:
-<pre><code><u>text</u></code></pre>
+```html
+<u>text</u>
+```
 * Toolbar element:
-<pre><code><a data-wysihtml5-command="underline">underline</a></code></pre>
+```html
+<a data-wysihtml5-command="underline">underline</a>
+```
 * Required parser rules:
-<pre><code>var wysihtml5ParserRules = {
+```javascript
+var wysihtml5ParserRules = {
   tags: {
     "u": 1
   }
 };
-</code></pre>
+```
 * Trigger via JavaScript:
-<pre><code>editorInstance.composer.commands.exec("underline");</code></pre>
+```javascript
+editorInstance.composer.commands.exec("underline");
+```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/underline.js
