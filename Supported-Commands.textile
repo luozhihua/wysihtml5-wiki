@@ -85,7 +85,7 @@ var wysihtml5ParserRules = {
 ```
 * Trigger via JavaScript:
 ```javascript
-editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow" });
+editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow", text: "Google" });
 ```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
 
