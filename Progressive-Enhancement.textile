@@ -12,11 +12,11 @@ A step by step explanation on how wysihtml5 turns a textarea into a rich text ed
 the iframe's <code><body></code>
 # Copies several attributes (spellcheck, autofocus, placeholder, className, title, ...) 
 from the <code><textarea></code> to the iframe's <code><body></code>
-# Checks whether HTMl5 autofocus and placeholder attributes are set and 
+# Checks whether HTML5 autofocus and placeholder attributes are set and 
 simulates their logic on the iframe's <code><body></code>
 # Hides the <code><textarea></code>
 # Initializes sync logic (text you typed into the iframe's <code><body></code> is automatically
 copied to the hidden <code><textarea></code>)
 # Observes the form's "onsubmit" and "onreset" events and simulates their
 behavior on the iframe's <code><body></code>
-# Checks whether a toolbar is given and sets event listeners on it's link
+# Checks whether a toolbar is given and sets event listeners on its link
