@@ -70,4 +70,4 @@ wysihtml5 supports many more "configuration options":https://github.com/xing/wys
 h2. 5. There you go
 
 Congrats you just integrated wysihtml5 into your website.
-Now enjoy a cold beer or consider checking out the full "JavaScript API reference":https://github.com/xing/wysihtml5/API.
+Now enjoy a cold beer.
