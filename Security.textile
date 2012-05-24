@@ -1,0 +1,23 @@
+h1. Client side
+
+*Scenario:* Content that is copy & pasted into the editor could contain scripts or styles that have an affect on page functionality. External content could even perform cookie stealing.
+
+*Solution*: wysihtml5 relies on a three-layered security model:
+
+# *Browser*: Modern browsers already sanitize content before inserting it into rich text editors. Unfortunately Internet Explorer isn't good at that. (see "tests":http://tifftiff.de/contenteditable/onpaste_test.html)
+# *iframe*: wysihtml5 is always rendered in a sandbox iframe. The iframe disallows javascript from being executed in IE (by using its proprietary "security attribute":http://msdn.microsoft.com/en-us/library/ie/ms534622(v=vs.85).aspx). In non-IE browsers sensitive variables (such as document.cookie, window.parent, localStorage etc. are protected via setters/getters)
+# *HTML5 Parser*: The "default HTML5 parser rules":https://github.com/xing/wysihtml5/tree/master/parser_rules strip out potentially malicious HTML (such as &lt;script&gt;, &lt;iframe&gt;, meta redirects, ...) 
+
+h1. Server side
+
+*Scenario:* An attacker can always omit wysihtml5's client side security layers and post malicious HTML to the server.
+
+*Solution:* A HTML sanitizer needs to be used on the server unless wysihtml5 is used in a trusted environment (eg. CMS where only people with permissions can interact with wysihtml5).
+
+Here's an incomplete list of proven HTML sanitizers:
+
+* Perl: "HTML5 sanitizer":https://github.com/xing/html5-sanitizer (uses the same parser rule definitions as wysihtml5)
+* Ruby: "sanitize":https://github.com/rgrove/sanitize/
+* Python: "Bleach":https://github.com/jsocol/bleach
+
+*Please note: Only use html sanitizers that do whitelisting instead of blacklisting* 
