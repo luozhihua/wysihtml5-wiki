@@ -1,4 +1,4 @@
-h1. Client side
+h2. Client side
 
 *Scenario:* Content that is copy & pasted into the editor could contain scripts or styles that have an affect on page functionality. External content could even perform cookie stealing.
 
@@ -8,7 +8,7 @@ h1. Client side
 # *iframe*: wysihtml5 is always rendered in a sandbox iframe. The iframe disallows javascript from being executed in IE (by using its proprietary "security attribute":http://msdn.microsoft.com/en-us/library/ie/ms534622(v=vs.85).aspx). In non-IE browsers sensitive variables (such as document.cookie, window.parent, localStorage etc. are protected via setters/getters)
 # *HTML5 Parser*: The "default HTML5 parser rules":https://github.com/xing/wysihtml5/tree/master/parser_rules strip out potentially malicious HTML (such as &lt;script&gt;, &lt;iframe&gt;, meta redirects, ...) 
 
-h1. Server side
+h2. Server side
 
 *Scenario:* An attacker can always omit wysihtml5's client side security layers and post malicious HTML to the server.
 
