@@ -25,6 +25,11 @@ h2. Progressive Enhancement
 
 "Step by step explanation":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement on how the editor turns a textarea into a rich text editing interface.
 
+
+h2. Security
+
+Please take a few minutes and read our notes concerning "wysihtml5 and its security concept":https://github.com/xing/wysihtml5/wiki/Security.
+
 h2. Hidden Gems
 
 wysihtml5 offers some neat extras. Discover them "here":https://github.com/xing/wysihtml5/wiki/Neat-Extras.
