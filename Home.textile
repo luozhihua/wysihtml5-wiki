@@ -31,7 +31,7 @@ wysihtml5 offers some neat extras. Discover them "here":https://github.com/xing/
 
 h2. Demos
 
-Check the "simple":http://tifftiff.de/wysihtml5/examples/simple.html and "advanced":http://tifftiff.de/wysihtml5/examples/advanced.html demos.
+Check the "simple":http://xing.github.com/wysihtml5/examples/simple.html and "advanced":http://xing.github.com/wysihtml5/examples/advanced.html demos. Also if you haven't already, check out the "editable github page":http://xing.github.com/wysihtml5.
 
 h2. Plugins
 
