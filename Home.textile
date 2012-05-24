@@ -28,7 +28,7 @@ h2. Progressive Enhancement
 
 h2. Security
 
-Please take a few minutes and read our notes concerning "wysihtml5 and its security concept":https://github.com/xing/wysihtml5/wiki/Security.
+Please take a few minutes and read our notes concerning wysihtml5 and "its security concept":https://github.com/xing/wysihtml5/wiki/Security.
 
 h2. Hidden Gems
 
