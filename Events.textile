@@ -5,7 +5,7 @@ The editor supports a variety of events that developers may hook into.
 h2. Usage
 
 ```javascript
-var editor = new wyishtml5.Editor("textarea-id");
+var editor = new wysihtml5.Editor("textarea-id");
 
 // observe
 function onChange() { alert("The content of the editor has changed"); };
