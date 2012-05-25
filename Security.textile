@@ -16,7 +16,7 @@ h2. Server Side
 
 Here's an incomplete list of proven HTML sanitizers:
 
-* Perl: "HTML5 sanitizer":https://github.com/xing/html5-sanitizer (uses the same parser rule definitions as wysihtml5)
+* Perl: "HTML5::Sanitizer":https://github.com/xing/html5-sanitizer (uses the same parser rule definitions as wysihtml5)
 * Ruby: "sanitize":https://github.com/rgrove/sanitize/
 * Python: "Bleach":https://github.com/jsocol/bleach
 
