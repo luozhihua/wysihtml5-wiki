@@ -67,7 +67,20 @@ var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea elem
 
 wysihtml5 supports many more "configuration options":https://github.com/xing/wysihtml5/wiki/Configuration.
 
-h2. 5. There you go
+
+h2. 5. Use a set of CSS classes to style the editor's content
+
+Browsers use a default style sheet to style elements, so if you use b, i, ul and li, there is already some styling visible in the editor.
+
+But for the colors, we use classes like <code>.wysiwyg-color-fuchsia</code>, and for floats, we use <code>.wysiwyg-float-right</code> or <code>-left</code>. 
+
+See the "advanced demo":https://github.com/xing/wysihtml5/blob/master/examples/advanced.html. You can add these classes with the "stylesheets - configuration option":https://github.com/xing/wysihtml5/wiki/Configuration (when you initialize Initialize wysihtml5, see above), i.e.
+
+<pre><code>stylesheets: ["css/reset.css", "css/editor.css"]</pre></code>
+
+The stylesheets are linked from within the head of the iframe's content then.
+
+h2. 6. There you go
 
 Congrats you just integrated wysihtml5 into your website.
 Now enjoy a cold beer.
