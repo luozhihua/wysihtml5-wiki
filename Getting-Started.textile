@@ -74,7 +74,7 @@ Browsers use a default style sheet to style elements, so if you use b, i, ul and
 
 But for the colors, we use classes like <code>.wysiwyg-color-fuchsia</code>, and for floats, we use <code>.wysiwyg-float-right</code> or <code>-left</code>. 
 
-See the "advanced demo":https://github.com/xing/wysihtml5/blob/master/examples/advanced.html. You can add these classes with the "stylesheets - configuration option":https://github.com/xing/wysihtml5/wiki/Configuration (when you initialize wysihtml5, see above), i.e.
+See the "CSS of the advanced demo":https://github.com/xing/wysihtml5/blob/master/examples/css/stylesheet.css. You can add these classes with the "stylesheets - configuration option":https://github.com/xing/wysihtml5/wiki/Configuration (when you initialize wysihtml5, see above), i.e.
 
 <pre><code>stylesheets: ["css/reset.css", "css/editor.css"]</pre></code>
 
