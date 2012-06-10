@@ -20,5 +20,6 @@ Here's an incomplete list of proven HTML sanitizers:
 * Ruby: "sanitize":https://github.com/rgrove/sanitize/
 * Python: "Bleach":https://github.com/jsocol/bleach
 * PHP: "HTML Purifier":http://htmlpurifier.org/
+* .NET: "sanitize":http://refactormycode.com/codes/333-sanitize-html
 
 *Please note: Only use html sanitizers that do whitelisting instead of blacklisting* 
