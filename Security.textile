@@ -19,5 +19,6 @@ Here's an incomplete list of proven HTML sanitizers:
 * Perl: "HTML5::Sanitizer":https://github.com/xing/html5-sanitizer (uses the same parser rule definitions as wysihtml5)
 * Ruby: "sanitize":https://github.com/rgrove/sanitize/
 * Python: "Bleach":https://github.com/jsocol/bleach
+* PHP: "HTML Purifier":http://htmlpurifier.org/
 
 *Please note: Only use html sanitizers that do whitelisting instead of blacklisting* 
