@@ -1,8 +1,8 @@
 1. Include scripts
-<!-- wysihtml5 parser rules -->
-<script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>
-<!-- Library -->
-<script src="/path-to-wysihtml5/dist/wysihtml5-0.3.0.min.js"></script>
+
+`<!-- wysihtml5 parser rules --> <script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>`
+`<!-- Library --> <script src="/path-to-wysihtml5/dist/wysihtml5-0.3.0.min.js"></script>`
+
 The first script contains the html5 parser rules that are needed for wysihtml5 in order to create valid and desired markup.
 Either use one of the existing parser rules sets or create your own.
 Check the advanced.js parser rules for details.
