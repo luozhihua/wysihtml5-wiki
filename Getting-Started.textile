@@ -64,6 +64,7 @@ var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea elem
 });
 </script>
 ```
+Make sure you place the <code><script></code> at the end of the document, before the <code></body></code> tag because the document must be loaded before running the script.
 
 wysihtml5 supports many more "configuration options":https://github.com/xing/wysihtml5/wiki/Configuration.
 
