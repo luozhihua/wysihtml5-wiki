@@ -4,3 +4,4 @@ h1. Plugins
 * "bootstrap-wysihtml5-rails":http://rubygems.org/gems/bootstrap-wysihtml5-rails - Ruby gem for the above
 * "wysihtml5_rails":https://github.com/Neener54/wysihtml5_rails - A gem for serving up wysihtml5 through the asset pipeline
 * "wysihtml5-rails":https://github.com/NARKOZ/wysihtml5-rails - Another gem for serving up wysihtml5 through the asset pipeline
+* "django-wysihtml5":https://github.com/danirus/django-wysihtml5 - Simple Django app that provides a Wysihtml5 rich text editor textarea widget.
