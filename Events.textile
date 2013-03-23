@@ -15,7 +15,7 @@ editor.on("load", onLoad);
 
 // unobserve
 editor.stopObserving("onChange", onChange);
-editor.stopObserving("onChange", onLoad);
+editor.stopObserving("onLoad", onLoad);
 ```
 
 h2.  List of supported events:
