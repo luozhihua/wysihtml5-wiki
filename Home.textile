@@ -2,50 +2,24 @@ h1. wysihtml5 community wiki
 
 h2. Introduction
 
-wysihtml5 is an open source rich text editor based on HTML5 technology and the progressive-enhancement approach.
-It uses a sophisticated security concept and aims to generate fully valid HTML5 markup by preventing unmaintainable tag soups and inline styles.
+wysihtml5 is an open source rich text editor based on HTML5 technology and the progressive-enhancement approach. It uses a sophisticated security concept and aims to generate fully valid HTML5 markup by preventing unmaintainable tag soups and inline styles.
 
-h2. Getting Started
+* "Getting Started":https://github.com/xing/wysihtml5/wiki/Getting-Started
+* "Configuration":https://github.com/xing/wysihtml5/wiki/Configuration
+* "Commands":https://github.com/xing/wysihtml5/wiki/Supported-Commands
+* "Events":https://github.com/xing/wysihtml5/wiki/Events
+* "Plugins":https://github.com/xing/wysihtml5/wiki/Plugins
+* "How to compile, test, and contribute":https://github.com/xing/wysihtml5/wiki/Contribute
 
-The "Getting Started Guide":https://github.com/xing/wysihtml5/wiki/Getting-Started explains how to integrate wysihtml5 easily into your website.
+h2. Additional topics
 
-h2. Configuration
-
-Find a list of all wysihtml5 configuration options "here":https://github.com/xing/wysihtml5/wiki/Configuration.
-
-h2. Commands
-
-wysihtml5 supports a variety of formatting commands. A full documentation can be found "here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
-
-h2. Events
-
-You can hook into wyishtml5's "custom events":https://github.com/xing/wysihtml5/wiki/Events and build custom functionality on top of it.
-
-h2. Progressive Enhancement
-
-"Step by step explanation":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement on how the editor turns a textarea into a rich text editing interface.
-
-
-h2. Security
-
-Please take a few minutes and read our notes concerning wysihtml5 and "its security concept":https://github.com/xing/wysihtml5/wiki/Security.
-
-h2. Hidden Gems
-
-wysihtml5 offers some neat extras. Discover them "here":https://github.com/xing/wysihtml5/wiki/Neat-Extras.
+* "Step-by-step explanation of progressive enhancement":https://github.com/xing/wysihtml5/wiki/Progressive-Enhancement
+* "Security in wysihtml5":https://github.com/xing/wysihtml5/wiki/Security
+* "Neat extras":https://github.com/xing/wysihtml5/wiki/Neat-Extras
+* "Changelog":https://github.com/xing/wysihtml5/blob/master/CHANGELOG.textile
 
 h2. Demos
 
-Check the "simple":http://xing.github.com/wysihtml5/examples/simple.html and "advanced":http://xing.github.com/wysihtml5/examples/advanced.html demos. Also if you haven't already, check out the "editable github page":http://xing.github.com/wysihtml5.
-
-h2. Plugins
-
-Find a list of projects using wysihtml5 "here":https://github.com/xing/wysihtml5/wiki/Plugins.
-
-h2. Change Log
-
-The official change log can always be found "here":https://github.com/xing/wysihtml5/blob/master/CHANGELOG.textile.
-
-h2. Contribute
-
-Learn how to "compile, test and contribute":https://github.com/xing/wysihtml5/wiki/Contribute your changes to wysihtml5.
+* "Simple demo":http://xing.github.com/wysihtml5/examples/simple.html
+* "Advanced demo":http://xing.github.com/wysihtml5/examples/advanced.html
+* "Editable GitHub page":http://xing.github.com/wysihtml5
