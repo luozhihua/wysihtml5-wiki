@@ -8,7 +8,7 @@ new wysihtml5.Editor("textarea-id", { // Could also pass a DOM node instead of a
     name:                 undef,
     // Whether the editor should look like the textarea (by adopting styles)
     style:                true,
-    // Id of the toolbar element, pass false value if you don't want any toolbar logic
+    // Id of the toolbar element or DOM node, pass false value if you don't want any toolbar logic
     toolbar:              undef,
     // Whether urls, entered by the user should automatically become clickable-links
     autoLink:             true,
