@@ -3,7 +3,7 @@ h1. Configuration
 Following is a list of all configuration parameters with their corresponding default values:
 
 ```javascript
-new wysihtml5.Editor("textarea-id", {
+new wysihtml5.Editor("textarea-id", { // Could also pass a DOM node instead of an ID
     // Give the editor a name, the name will also be set as class name on the iframe and on the iframe's body 
     name:                 undef,
     // Whether the editor should look like the textarea (by adopting styles)
