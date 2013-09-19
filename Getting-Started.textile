@@ -1,4 +1,4 @@
-h1. Getting Started
+h1. Getting it Started
 
 h2. 1. Include scripts
 
