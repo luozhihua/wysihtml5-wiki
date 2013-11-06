@@ -20,7 +20,7 @@ Below is a full list of formatting commands supported by wysihtml5.
 * "justifyCenter":#justifyCenter
 * "justifyLeft":#justifyLeft
 * "justifyRight":#justifyRight
-* "mergeTableCells":mergeTableCells
+* "mergeTableCells":#mergeTableCells
 * "underline":#underline
 
 h2. addTableCells <a name="addTableCells"></a>
