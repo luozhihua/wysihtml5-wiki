@@ -2,11 +2,8 @@ h1. Supported Commands
 
 Below is a full list of formatting commands supported by wysihtml5.
 
-* "addTableCells":#addTableCells
 * "bold":#bold
 * "createLink":#createLink
-* "createTable":#createTable
-* "deleteTableCells":#deleteTableCells
 * "fontSize":#fontSize
 * "foreColor":#foreColor
 * "formatBlock":#formatBlock
@@ -20,10 +17,7 @@ Below is a full list of formatting commands supported by wysihtml5.
 * "justifyCenter":#justifyCenter
 * "justifyLeft":#justifyLeft
 * "justifyRight":#justifyRight
-* "mergeTableCells":mergeTableCells
 * "underline":#underline
-
-h2. addTableCells <a name="addTableCells"></a>
 
 h2. bold <a name="bold"></a>
 
@@ -94,10 +88,6 @@ var wysihtml5ParserRules = {
 editorInstance.composer.commands.exec("createLink", { href: "http://google.com", target: "_blank", rel: "nofollow", text: "Google" });
 ```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/createLink.js
-
-h2. createTable <a name="createTable"></a>
-
-h2. deleteTableCells <a name="deleteTableCells"></a>
 
 h2. fontSize <a name="fontSize"></a>
 
@@ -500,8 +490,6 @@ var wysihtml5ParserRules = {
 editorInstance.composer.commands.exec("justifyRight");
 ```
 * "Source code":https://github.com/xing/wysihtml5/blob/master/src/commands/justifyRight.js
-
-h2. mergeTableCells <a name="mergeTableCells"></a>
 
 h2. underline <a name="underline"></a>
 
