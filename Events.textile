@@ -51,8 +51,10 @@ This is a workaround to use jquery default events on the textarea used by wysiht
 
 ```javascript
 $('.wysihtml5-sandbox').contents().find('body').on(event,function() {...});        
-    
-//Exemple with keydown
+```
+
+Exemple with keydown
+```javascript
 $('.wysihtml5-sandbox').contents().find('body').on("keydown",function() {
         console.log("Handler for .keypress() called.");
     });
