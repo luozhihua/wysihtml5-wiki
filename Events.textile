@@ -18,7 +18,7 @@ editor.stopObserving("onChange", onChange);
 editor.stopObserving("onLoad", onLoad);
 ```
 
-h2.  List of supported events:
+h2. List of supported events:
 
 * *load* - when the editor is fully loaded
 * *beforeload* - for internal use only
