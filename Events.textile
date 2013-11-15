@@ -45,7 +45,7 @@ h2. List of supported events:
 * *beforecommand:composer* - when the user is about to format something via a rich text command
 * *aftercommand:composer* - when the user formatted something via a rich text command
 
-h2. Usage wysihtml5 iframe event listner (jquery)
+h2. Wysihtml5 iframe event listner (jquery)
 
 ```javascript
 $('.wysihtml5-sandbox').contents().find('body').on(event,function() {...});        
