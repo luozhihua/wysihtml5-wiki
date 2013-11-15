@@ -44,4 +44,13 @@ h2.  List of supported events:
 * *redo:composer* - when the user invokes a redo action (CMD + Y, CMD + SHIFT + Z or via context menu)
 * *beforecommand:composer* - when the user is about to format something via a rich text command
 * *aftercommand:composer* - when the user formatted something via a rich text command
-* *iframe event* - a way to add default event to the iframe
+
+.h2 wysihtml5 iframe event listner (jquery)
+
+```javascript
+$('.wysihtml5-sandbox').contents().find('body').on(event,function() {...});        
+    
+//Exemple with keydown
+$('.wysihtml5-sandbox').contents().find('body').on("keydown",function() {
+        console.log("Handler for .keypress() called.");
+    });
