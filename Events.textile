@@ -54,3 +54,4 @@ $('.wysihtml5-sandbox').contents().find('body').on(event,function() {...});
 $('.wysihtml5-sandbox').contents().find('body').on("keydown",function() {
         console.log("Handler for .keypress() called.");
     });
+```
