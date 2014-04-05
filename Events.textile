@@ -45,17 +45,19 @@ h2. List of supported events:
 * *beforecommand:composer* - when the user is about to format something via a rich text command
 * *aftercommand:composer* - when the user formatted something via a rich text command
 
-h2. Wysihtml5's editor event listener (jquery) :
+h2. Capturing other events that occur within the Wysihtml editor's iframe
 
-This is a workaround to use jquery default events on the textarea used by wysihtml5.
+Using jquery, here's a way to capture any events you're interested in:
 
 ```javascript
 $('.wysihtml5-sandbox').contents().find('body').on(event,function() {...});        
 ```
 
-Example with keydown event :
+An example for the keydown event:
 ```javascript
 $('.wysihtml5-sandbox').contents().find('body').on("keydown",function() {
         console.log("Handler for .keypress() called.");
     });
 ```
+
+Note: Make sure that the wysihtml iframe is fully loaded before registering events like this, otherwise results may vary across browsers. One way to ensure that the iframe is fully loaded is to define functions like the above as a callback on the editor's "load" function.
