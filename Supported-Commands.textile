@@ -142,11 +142,11 @@ h2. foreColor <a name="foreColor"></a>
 * Generated markup:
 ```html
 <!-- Red -->
-<span class="wysiwyg-font-color-red">text</span>
+<span class="wysiwyg-color-red">text</span>
 <!-- Green -->
-<span class="wysiwyg-font-color-green">text</span>
+<span class="wysiwyg-color-green">text</span>
 <!-- Blue -->
-<span class="wysiwyg-font-color-blue">text</span>
+<span class="wysiwyg-color-blue">text</span>
 <!-- ... and many more colors possible -->
 ```
 * Toolbar elements:
