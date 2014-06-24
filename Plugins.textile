@@ -1,7 +1,7 @@
 h1. Plugins
 
 * "bootstrap-wysihtml5":https://github.com/jhollingworth/bootstrap-wysihtml5 - Plugin for twitter bootstrap
-* "bootstrap3-wysihtml5":https://github.com/Waxolunist/bootstrap3-wysihtml5-bower - Plugin for twitter bootstrap 3 with support for bower
+* "bootstrap3-wysihtml5-bower":https://github.com/Waxolunist/bootstrap3-wysihtml5-bower - Plugin for twitter bootstrap 3 with support for bower
 * "bootstrap3-wysihtml5":https://github.com/schnawel007/bootstrap3-wysihtml5 - Plugin for twitter bootstrap 3
 * "bootstrap-wysihtml5-rails":http://rubygems.org/gems/bootstrap-wysihtml5-rails - Ruby gem for the above
 * "wysihtml5_rails":https://github.com/Neener54/wysihtml5_rails - A gem for serving up wysihtml5 through the asset pipeline
