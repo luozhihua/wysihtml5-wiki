@@ -5,7 +5,7 @@ h2. Client Side
 *Solution*: wysihtml5 relies on a three-layered security model:
 
 # *Browser*: Modern browsers already sanitize content before inserting it into rich text editors. Unfortunately Internet Explorer isn't good at that. (see "tests":http://tifftiff.de/contenteditable/onpaste_test.html)
-# *iframe*: wysihtml5 is always rendered in a sandbox iframe. The iframe disallows javascript from being executed in IE (by using its proprietary "security attribute":http://msdn.microsoft.com/en-us/library/ie/ms534622(v=vs.85).aspx). In non-IE browsers sensitive variables (such as document.cookie, window.parent, localStorage etc. are protected via setters/getters)
+# *iframe*: wysihtml5 is always rendered in a sandbox iframe. The iframe disallows javascript from being executed in IE (by using its proprietary "security attribute":http://msdn.microsoft.com/en-us/library/ie/ms534622(v=vs.85).aspx). In non-IE browsers sensitive variables (such as document.cookie, window.parent, localStorage etc.) are protected via setters/getters
 # *HTML5 Parser*: The "default HTML5 parser rules":https://github.com/xing/wysihtml5/tree/master/parser_rules strip out potentially malicious HTML (such as &lt;script&gt;, &lt;iframe&gt;, meta redirects, ...) 
 
 h2. Server Side
