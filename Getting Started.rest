@@ -1,8 +1,8 @@
 h1. Getting Started
 
-h2. 1. Include scripts
+h2. 1. Include scriptswefwef
 
-```html
+```htmlwefwef
 <!-- wysihtml5 parser rules -->
 <script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>
 <!-- Library -->
