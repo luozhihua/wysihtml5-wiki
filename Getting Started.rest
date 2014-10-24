@@ -1,6 +1,4 @@
-h1. Getting Started
-
-h2. 1. Include scriptswefwef
+##1. Include scriptswefwef
 
 ```htmlwefwef
 <!-- wysihtml5 parser rules -->
@@ -14,7 +12,7 @@ Either use one of the "existing parser rules sets":https://github.com/xing/wysih
 Check the "advanced.js parser rules":https://github.com/xing/wysihtml5/blob/master/parser_rules/advanced.js for details.
 * The second script is the minified wysihtml5 library. It's located in the "dist":https://github.com/xing/wysihtml5/tree/master/dist folder of this repository.
 
-h2. 2. Create a textarea
+##2. Create a textarea
 
 ```html
 <form><textarea id="wysihtml5-textarea" placeholder="Enter your text ..." autofocus></textarea></form>
@@ -26,7 +24,7 @@ The resulting rich text editor will much behave and look like the textarea since
 
 *Please note:* The textarea will always hold the editor's generated markup. Therefore wysihtml5 integrates smoothly with forms.
 
-h2. 3. Create a toolbar
+##3. Create a toolbar
 
 ```html
 <div id="wysihtml5-toolbar" style="display: none;">
@@ -54,7 +52,7 @@ The toolbar contains the formatting options. Make sure the toolbar element has a
 
 *Please note:* wysihtml5 supports many more formatting commands. Check the "advanced demo":https://github.com/xing/wysihtml5/blob/master/examples/advanced.html or find a full list of "all supported commands here":https://github.com/xing/wysihtml5/wiki/Supported-Commands.
 
-h2. 4. Initialize wysihtml5
+##4. Initialize wysihtml5
 
 ```html
 <script>
@@ -81,7 +79,7 @@ See the "CSS of the advanced demo":https://github.com/xing/wysihtml5/blob/master
 
 The stylesheets are linked from within the head of the iframe's content then.
 
-h2. 6. There you go
+##6. There you go
 
 Congrats you just integrated wysihtml5 into your website.
 Now enjoy a cold beer.
