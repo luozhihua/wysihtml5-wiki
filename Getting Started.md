@@ -1,6 +1,6 @@
-## 1. Include scriptswefweff
+## 1. Include scripts
 
-```htmlwefwef
+```html
 <!-- wysihtml5 parser rules -->
 <script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>
 <!-- Library -->
