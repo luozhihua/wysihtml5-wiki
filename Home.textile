@@ -1,4 +1,6 @@
-h1. wysihtml5 community wiki
+h1. NOTE - this project is "no longer actively maintained":https://github.com/xing/wysihtml5/issues/495.
+
+Please use the fork at "http://edicy.github.io/wysihtml5/":http://edicy.github.io/wysihtml5/ instead.
 
 h2. Introduction
 
